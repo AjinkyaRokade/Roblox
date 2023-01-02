@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function showDetails(){
+            document.getElementById("mydiv").innerHTML+="Product Name : "+document.getElementById("name").value+"<br/>";
+            document.getElementById("mydiv").innerHTML+="Quantity : "+document.getElementById("qty").value+"<br/>";
+            document.getElementById("mydiv").innerHTML+="Rate : "+document.getElementById("rate").value+"<br/>";
+            document.getElementById("mydiv").innerHTML+="Category : "+document.getElementById("ctg").value+"<br/>";
+
+        }
+    </script>
+</head>
+<body>
+    <h1 style="text-align: center;">IACSD Manufacturing Company</h1>
+    <table style="margin: auto;">
+
+    <form >
+        <tr>
+        <td>
+        <label for="name">Product Name</label>
+        </td>
+        <td>
+        <input type="text" name="name" id="name">
+        </td>
+    </tr>
+    <tr>
+        <td>
+        <label for="qty">Quantity</label>
+        </td>
+        <td>
+        <input type="number" name="qty" id="qty">
+        </td>
+    </tr>
+    <tr>
+        <td>
+        <label for="rate">Rate</label>
+        </td>
+        <td>
+        <input type="number" name="rate" id="rate">
+        </td>
+    </tr>
+    <tr>
+        <td>
+        <label for="ctg">Category</label>
+        </td>
+        <td>
+        <select name="ctg" id="ctg">
+            <option value="Toys">Toys</option>
+            <option value="Furniture">Furniture</option>
+            <option value="Electricals">Electricals</option>
+            <option value="Hardware">Hardware</option>
+        </select>
+        </td>
+
+    </tr>
+    <tr>
+        <td>
+            <td><button type="button" id="btn" onclick="showDetails()">Show</button></td>
+        </td>
+    </tr>
+
+    
+    </form>
+</table>
+<div id="mydiv">
+
+</div>
+</body>
+</html>
